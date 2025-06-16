@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Panier - Vibau Store</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+  <style>
+    .container {
+      max-width: 800px;
+      margin: auto;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    h2 {
+      color: #e83e8c;
+    }
+
+    .panier-vide {
+      margin-top: 30px;
+      background-color: #2b2b2b;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(232, 62, 140, 0.2);
+      font-size: 1.1em;
+      color: #ddd;
+    }
+
+    .emoji {
+      font-size: 3rem;
+      margin-bottom: 20px;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    li {
+      background-color: #1e1e1e;
+      margin: 10px auto;
+      padding: 10px;
+      border-radius: 5px;
+      max-width: 400px;
+      color: #fff;
+    }
+
+    .btn {
+      margin-top: 30px;
+      background-color: #e83e8c;
+      color: white;
+      padding: 12px 24px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+    .btn:hover {
+      background-color: #c71b6a;
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Vibau Store</h1>
+    <p class="tagline"><em>Le plaisir est dans la manette 🎮</em></p>
+    <nav>
+      <a href="index.html">Accueil</a>
+      <a href="boutique.html">Boutique</a>
+      <a href="àpropos.html">À propos</a>
+      <a href="avis.html">Avis</a>
+      <a href="blog.html">Blog</a>
+      <a href="contact.html">Contact</a>
+      <a href="panier.html">Panier <span id="compteur-panier">(0)</span></a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <h2>🛒 Ton panier</h2>
+
+    <div class="panier-vide" id="contenu-panier">
+      <!-- Les produits seront affichés ici -->
+    </div>
+
+    <button class="btn" onclick="localStorage.clear(); location.reload();">
+      Vider le panier
+    </button>
+  </main>
+
+  <footer>
+    &copy; 2025 Vibau Store — Aucun paiement requis. Juste de l'amour (et un peu de gêne).
+  </footer>
+</body>
+</html>

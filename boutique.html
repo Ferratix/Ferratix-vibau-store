@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Boutique - Vibau Store</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+  <style>
+    .container {
+      max-width: 1000px;
+      margin: auto;
+      padding: 30px;
+      text-align: center;
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+      justify-items: center;
+    }
+
+    .product {
+      background-color: #2b2b2b;
+      padding: 20px;
+      border-radius: 10px;
+      text-align: center;
+      box-shadow: 0 0 10px rgba(232, 62, 140, 0.2);
+      width: 100%;
+      max-width: 300px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 100%;
+    }
+
+    .product h3 {
+      margin-top: 0;
+      color: #e83e8c;
+    }
+
+    .product p {
+      font-size: 0.95em;
+      margin-bottom: 10px;
+      color: #ddd;
+    }
+
+    .product .prix {
+      font-weight: bold;
+      color: #fff;
+      margin-bottom: 15px;
+    }
+
+    .product .btn {
+      width: auto;
+      margin: 0 auto;
+      padding: 12px 24px;
+      transition: transform 0.2s ease, background-color 0.3s ease;
+    }
+
+    .product .btn:hover {
+      background-color: #c71b6a;
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Vibau Store</h1>
+    <p class="tagline"><em>Le plaisir est dans la manette 🎮</em></p>
+    <nav>
+      <a href="index.html">Accueil</a>
+      <a href="boutique.html">Boutique</a>
+      <a href="àpropos.html">À propos</a>
+      <a href="avis.html">Avis</a>
+      <a href="blog.html">Blog</a>
+      <a href="contact.html">Contact</a>
+      <a href="panier.html">Panier <span id="compteur-panier">(0)</span></a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <h2>🛒 Nos Incontournables</h2>
+    <p>Une sélection 100% validée par les subs les plus coquins de Vibau.</p>
+
+    <div class="product-grid">
+      <div class="product">
+        <h3>🍌 Vibronator 3000</h3>
+        <p>L'outil ultime pour secouer ta manette interne.</p>
+        <p class="prix">69,99 €</p>
+        <button class="btn" onclick="ajouterAuPanier('Vibronator 3000', 69.99)">Ajouter au panier</button>
+      </div>
+
+      <div class="product">
+        <h3>🕳️ La Grotte Mystérieuse</h3>
+        <p>Personne ne sait ce qu'il y a au fond. Tu y vas ?</p>
+        <p class="prix">49,99 €</p>
+        <button class="btn" onclick="ajouterAuPanier('La Grotte Mystérieuse', 49.99)">Ajouter au panier</button>
+      </div>
+
+      <div class="product">
+        <h3>🚀 La Fusée du Plaisir</h3>
+        <p>Décollage immédiat vers Uranus. 7 vitesses incluses.</p>
+        <p class="prix">89,90 €</p>
+        <button class="btn" onclick="ajouterAuPanier('La Fusée du Plaisir', 89.90)">Ajouter au panier</button>
+      </div>
+
+      <div class="product">
+        <h3>🎮 Le Vibau Controller</h3>
+        <p>Manette qui ne sert à rien… sauf à vibrer fort.</p>
+        <p class="prix">59,95 €</p>
+        <button class="btn" onclick="ajouterAuPanier('Le Vibau Controller', 59.95)">Ajouter au panier</button>
+      </div>
+
+      <div class="product">
+        <h3>🦾 L’Ami Fidèle</h3>
+        <p>Silencieux. Puissant. Toujours dispo. Comme un bon sub.</p>
+        <p class="prix">39,90 €</p>
+        <button class="btn" onclick="ajouterAuPanier('L’Ami Fidèle', 39.90)">Ajouter au panier</button>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    &copy; 2025 Vibau Store. Le plaisir, version patchée.
+  </footer>
+</body>
+</html>
